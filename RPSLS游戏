@@ -1,0 +1,47 @@
+#coding:gbk
+#实验目的：RPSLS游戏
+#作者：何金龙
+def number_to_name(number):
+    if number==0:
+       return "石头"
+    if number==1:
+       return "史波克"
+    if number==2:
+       return "布"
+    if number==3:
+       return "蜥蜴"
+    if number==4:
+       return "剪刀"
+def rpsls(b,choice_name):
+	if b=="剪刀" and choice_name=="布":
+	   print("电脑赢了！")
+	elif b=="布" and choice_name=="石头":
+	   print("电脑赢了！")
+	elif b=="石头" and choice_name=="剪刀":
+	   print("电脑赢了！")
+	elif b=="石头" and choice_name=="蜥蜴":
+	   print("电脑赢了！")	
+	elif b=="蜥蜴" and choice_name=="史波克":
+	   print("电脑赢了！")	
+	elif choice_name=="剪刀" and b=="布":
+	   print("您赢了！")
+	elif choice_name=="布" and b=="石头":
+	   print("您赢了！")
+	elif choice_name=="石头" and b=="剪刀":
+	   print("您赢了！")
+	elif choice_name=="石头" and b=="蜥蜴":
+	   print("您赢了！")
+	elif choice_name=="蜥蜴" and b=="史波克":
+	   print("您赢了！")
+	else:
+	   print("平局")
+import random
+a=random.randint(0,4)
+print("欢迎使用RPSLS游戏")
+print("----------------")
+print("请输入您的选择:")
+choice_name=input()
+b=number_to_name(a)
+print("您的选择为：%s"%(choice_name))
+print("计算机的选择为：%s"%(b))
+rpsls(b,choice_name)
